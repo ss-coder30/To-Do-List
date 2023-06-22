@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body >
+    <!-- <% if(kindOfDay === "saturday" || kindOfDay === "sunday"){ %>  <!--to use scripts like if, else, switch, while, use scriplet tags <% _____ %> -->
+        <!-- <h1 style="color: rgb(245, 8, 245); position: absolute;"><%=  kindOfDay %> To Do list</h1>
+    <% } else{ %>
+   
+        <h1 style="color: rgb(93, 247, 10); position: absolute;"><%=  kindOfDay %> To Do list</h1>
+
+    <% } %> --> 
+
+    <h1 style="color: rgb(93, 247, 10);"> <%= kindOfDay %> To Do List</h1>
+
+    <ul>
+        <li>Mama work</li>
+        <li>Course</li>
+        <li>DSA</li>
+        <li><%= newListItem %></li> 
+    </ul>
+
+    <form action="/" method="post">
+        <input type="text" name="listItem" id="" placeholder="enter your task">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
