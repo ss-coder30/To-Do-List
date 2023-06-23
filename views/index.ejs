@@ -17,10 +17,13 @@
     <h1 style="color: rgb(93, 247, 10);"> <%= kindOfDay %> To Do List</h1>
 
     <ul>
-        <li>Mama work</li>
+        <!-- <li>Mama work</li>
         <li>Course</li>
-        <li>DSA</li>
-        <li><%= newListItem %></li> 
+        <li>DSA</li> -->
+        <% for(var i = 0; i<newListItems.length; i++){  %>
+            <li><%= newListItems[i] %></li>
+        <% } %>
+        
     </ul>
 
     <form action="/" method="post">

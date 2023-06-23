@@ -9,7 +9,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
-var item = "";
+var items = [];
 app.get("/", function(req, res){
 
     var today = new Date();
@@ -57,14 +57,16 @@ app.get("/", function(req, res){
 
     var day = today.toLocaleDateString("en-US", options);
 
-    res.render("index", {kindOfDay: day, newListItem: item});
+    res.render("index", {kindOfDay: day, newListItems: items});
 
 })
 
 app.post("/", (req, res)=>{
     // res.send("task added");
     item = req.body.listItem;
-    console.log(item);
+
+    items.push(item); // to input many items in the array
+    // console.log(item);
     res.redirect("/"); // it will redirect the post request to home route (get method)
 })
 
